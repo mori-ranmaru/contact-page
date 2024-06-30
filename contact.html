@@ -29,19 +29,65 @@
 	<div class="mv">
 		<h1><img src="mv.png" alt=""></h1>
 	</div>
+	<div class="mori">
+		<h2>お問合せ</h2>
+		<p>お問い合わせや業務内容に関するご質問は、電話またはこちらのお問い合わせフォームより承っております。
+			後ほど担当者よりご連絡させていただきます。</p>
+	</div>
 	<main>
-		<form action="/submit_registration" method="post">
-			<label for="fname">フリカナ:</label><br>
-			<input type="text" id="fname" name="fname"><br>
-			<label for="email">メールアドレス:</label><br>
-			<input type="email" id="email" name="email"><br>
-			<label for="password">パスワード:</label><br>
-			<input type="password" id="password" name="password"><br>
-			<input type="checkbox" id="terms" name="terms">
-			<label for="terms">利用規約に同意する</label><br>
-			<input type="submit" value="登録">
-	</form>
-
+		<div id="contact-form" class="form_block">
+			<form action="#" method="post">
+				<input type="hidden" name="_token" value="VWdc1338RFKtqZe4a91tCquXpf7fs34n5IQJ1RX9">
+				<table>
+					<tbody>
+						<tr>
+							<th>お名前<span class="req">（必須）</span></th>
+							<td><input type="text" name="お名前" placeholder="太郎"></td>
+						</tr>
+						<tr>
+							<th>フリガナ<span class="req">（必須）</span></th>
+							<td><input type="text" name="フリガナ" required="required" placeholder="タロウ"></td>
+						</tr>
+						<tr>
+							<th>メールアドレス<span class="req">（必須）</span></th>
+							<td><input type="email" name="メールアドレス" placeholder="info@haruki.com"></td>
+						</tr>
+						<tr>
+							<th>電話番号<span class="req">（必須）</span></th>
+							<td><input type="tel" name="電話番号" placeholder="090-1234-5678"></td>
+						</tr>
+						<tr>
+							<th>お問合せ項目<span class="req">（必須）</span></th>
+							<td>
+								<select name="お問い合わせ項目">
+									<option value="">選択してください</option>
+									<option value="product">商品について</option>
+									<option value="order">注文について</option>
+									<option value="ship">配送について</option>
+									<option value="service">サービスについて</option>
+									<option value="other">その他</option>
+								</select>
+							</td>
+						</tr>
+						<tr class="title_top">
+							<th>お問い合わせ内容<span class="req">（必須）</span></th>
+							<td><textarea name="お問い合わせ内容" placeholder="こちらにお問い合わせ内容をご記載ください" rows="10"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<th>個人情報保護方針<span class="req">必須</span></th>
+							<td>
+									<label>
+											<input type="checkbox" name="個人情報の取り扱いについて同意する" true-value="個人情報の取り扱いについて同意する" false-value="" class="radio_btn square int">
+											<span class="radio-icon"></span>個人情報保護方針に同意する
+									</label>
+									<span class="errors"></span>
+							</td>
+					</tr>
+					</table>
+				</form>
+					<div class="zsk_btn_area"><div><button type="button" class="zsk_btn01 anime_btn" disabled="disabled"><span>確認</span> <!----></button></div> <!----></div>
+		</div>
 	</main>
 	<section class="sec_btn">
 		<div class="btn_left">
@@ -77,3 +123,5 @@
 
 </body>
 </html>
+
+
